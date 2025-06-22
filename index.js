@@ -45,7 +45,7 @@ async function exportCurrentPageAsHTML() {
   }
 
   const blocksTree = await logseq.Editor.getPageBlocksTree(page.originalName)
-  const markdownContent = blockTreeToMarkdown(blocksTree)
+  const markdownContent = blockTreeToMarkdown(blocksTree).replace("collapsed:: true", "")
 
 
 
